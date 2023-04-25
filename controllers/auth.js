@@ -65,6 +65,7 @@ exports.getSignup = (req, res) => {
   });
 };
 
+
 exports.postSignup = (req, res, next) => {
   const validationErrors = [];
   if (!validator.isEmail(req.body.email))
@@ -115,4 +116,13 @@ exports.postSignup = (req, res, next) => {
       });
     }
   );
+};
+
+
+exports.getSignupGarden = (req, res) => {
+
+  if (req.user) {
+    // need to add another if - if user has garden, redirect to profile
+    res.render("signup-garden");
+  }
 };
