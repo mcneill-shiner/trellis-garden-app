@@ -17,9 +17,9 @@ const GardenSchema = new mongoose.Schema({
     type: Date,
     require: true,
   },
-  gardenMethod: {
-    [type: String]
-  },
+  gardenMethod: [{
+    type: String,
+  }],
   createdAt: {
     type: Date,
     default: Date.now,
