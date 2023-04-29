@@ -5,7 +5,7 @@ const GardenSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
-  zip: {
+  zipCode: {
     type: Number,
     require: true,
   },
