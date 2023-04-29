@@ -20,11 +20,11 @@ const GardenSchema = new mongoose.Schema({
   // gardenMethod: [{
   //   type: String,
   // }],
-  gardenMethod: [{
+  gardenMethod: {
     seedlings: {type: Boolean, default: false},
     sowDirect: {type: Boolean, default: false},
     startIndoors: {type: Boolean, default: false},
-  }],
+  },
   createdAt: {
     type: Date,
     default: Date.now,
