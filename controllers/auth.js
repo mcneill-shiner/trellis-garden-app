@@ -122,11 +122,23 @@ exports.postSignup = (req, res, next) => {
 
 
 exports.getSignupGarden = (req, res) => {
-
+  // check if user is logged in AND does not have a garden; else redirect to edit profile pg
   res.render("signup-garden");
-
-  // if (req.user) {
-  //   // need to add another if - if user has garden, redirect to profile
-  //   res.render("signup-garden");
-  // }
 };
+
+exports.postSignupGarden = (req, res) => {
+
+  const garden = new Garden({
+    user: req.user.id,
+    zipCode: zipCode,
+    firstFrost: firstFrost,
+    lastFrost: lastFrost,
+    gardenMethod: {
+      seedlings: seedings,
+      sowDirect: sowDirect,
+      startIndoors: startIndoors
+    },
+  });
+    console.log("Garden settings have been saved");
+    res.redirect("/profile");
+}
