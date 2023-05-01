@@ -1,6 +1,7 @@
 const passport = require("passport");
 const validator = require("validator");
 const User = require("../models/User");
+const Garden = require("../models/Garden");
 
 exports.getLogin = (req, res) => {
   if (req.user) {
@@ -121,22 +122,22 @@ exports.postSignup = (req, res, next) => {
 };
 
 
-exports.getSignupGarden = (req, res) => {
+exports.getGarden = (req, res) => {
   // check if user is logged in AND does not have a garden; else redirect to edit profile pg
   res.render("signup-garden");
 };
 
-exports.postSignupGarden = (req, res) => {
+exports.postGarden = (req, res) => {
 
   const garden = new Garden({
     user: req.user.id,
-    zipCode: zipCode,
-    firstFrost: firstFrost,
-    lastFrost: lastFrost,
+    zipCode: req.body.zipCode,
+    firstFrost: req.body.firstFrost,
+    lastFrost: req.body.lastFrost,
     gardenMethod: {
-      seedlings: seedings,
-      sowDirect: sowDirect,
-      startIndoors: startIndoors
+      seedlings: req.body.seedlings,
+      sowDirect: req.body.sowDirect,
+      startIndoors: req.body.startIndoors
     },
   });
     console.log("Garden settings have been saved");

@@ -17,6 +17,7 @@ router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
 
-router.get("/signup-garden", authController.getSignupGarden);
+router.get("/signup-garden", authController.getGarden);
+router.post("/signup-garden", authController.postGarden);
 
 module.exports = router;

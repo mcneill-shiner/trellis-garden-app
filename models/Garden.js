@@ -17,9 +17,6 @@ const GardenSchema = new mongoose.Schema({
     type: Date,
     require: true,
   },
-  // gardenMethod: [{
-  //   type: String,
-  // }],
   gardenMethod: {
     seedlings: {type: Boolean, default: false},
     sowDirect: {type: Boolean, default: false},
@@ -31,4 +28,4 @@ const GardenSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Post", PostSchema);
+module.exports = mongoose.model("Garden", GardenSchema);
