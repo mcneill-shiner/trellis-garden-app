@@ -127,19 +127,19 @@ exports.getGarden = (req, res) => {
   res.render("signup-garden");
 };
 
-exports.postGarden = (req, res) => {
-
-  const garden = new Garden({
-    user: req.user.id,
-    zipCode: req.body.zipCode,
-    firstFrost: req.body.firstFrost,
-    lastFrost: req.body.lastFrost,
-    gardenMethod: {
-      seedlings: req.body.seedlings,
-      sowDirect: req.body.sowDirect,
-      startIndoors: req.body.startIndoors
-    },
-  });
+exports.postGarden = async (req, res) => {
+  try {
+    await Garden.create({
+      user: req.user.id,
+      zipCode: req.body.zipCode,
+      firstFrost: req.body.firstFrost,
+      lastFrost: req.body.lastFrost,
+      gardenMethod: req.body.gardenMethod,
+      createdAt: Date.now()
+    });
     console.log("Garden settings have been saved");
     res.redirect("/profile");
+  } catch (err) {
+    console.log(err);
+  };  
 }

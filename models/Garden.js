@@ -18,13 +18,10 @@ const GardenSchema = new mongoose.Schema({
     require: true,
   },
   gardenMethod: {
-    seedlings: {type: Boolean, default: false},
-    sowDirect: {type: Boolean, default: false},
-    startIndoors: {type: Boolean, default: false},
+    type: Array,
   },
   createdAt: {
     type: Date,
-    default: Date.now,
   },
 });
 
