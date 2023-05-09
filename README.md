@@ -23,8 +23,11 @@ Any vegetable gardener, whether they're working a small community garden plot or
 - Guidance on selecting frost dates
 - Easily adjust frost date based on forecast (w/ advice)
 - GANNT/calendar view of tasks
+- Succession planting
 - Ability to add more than one garden
 - Option to distinguish between beginner & experienced gardener, with tooltips displaying or not
+- Email notifications: summary of the week's tasks, what was completed, links to helpful content
+- Alerts (email & dashboard) to set the next season's frost dates
 - Content & knowledge base
 - Store (dropship)
 - Major feature: space planning tool, eventually with a time component
@@ -34,9 +37,16 @@ Any vegetable gardener, whether they're working a small community garden plot or
 ### Next Steps
 
 - Set up plant db
-- Dashboard ui (w/ hardcoded sample data?)
+- Dashboard ui (w/ hardcoded sample data to start?)
+- Switch out bootstrap for tailwind
+- Set up basic design system
+- Research alternate names
+- Schema/validation for zone/frost dates
 
 ### Questions/Unknowns
 
 - Do users' plants need to work as copies/references to the original db?
 - Is a nonrelational db the best option for this? Most flexible
+- Best way to handle the plant db/JSON formatting? Lots of tools for the linting, but is there something better for the initial object building?
+- Does it make sense to set up plant db/API separately, so it can be made open source in the future?
+- When are standards for next season's frost dates set?
