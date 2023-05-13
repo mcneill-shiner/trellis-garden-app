@@ -4,6 +4,7 @@
   "description": "100Devs Social Network",
   "main": "server.js",
   "scripts": {
+    "css-compile": "node-sass --watch sass -o public/css/",
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,12 +23,15 @@
     "jquery": "^3.6.4",
     "method-override": "^3.0.0",
     "mongodb": "^3.6.5",
-    "mongoose": "^5.12.3",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "nodemon": "^2.0.7",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "mongoose": "^5.12.3",
+    "node-sass": "^9.0.0"
   }
 }
