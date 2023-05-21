@@ -1,9 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400;1,9..144,700&display=swap");
+
 // Customize some defaults
 $body-color: #333;
 $body-bg: #fff;
 $border-radius: 0.4rem;
 $success: #7952b3;
-$primary: olive;
+$primary: #7d5122;
+$secondary: #e9bd39;
+$light: #9ab89f;
 $danger: #ff4136;
+$body-bg: #cfe1c8;
+// $link-color: ;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+.font-serif {
+  font-family: "Fraunces", "Garamond", system-ui;
+}
