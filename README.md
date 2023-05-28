@@ -45,6 +45,7 @@ Any vegetable gardener, whether they're working a small community garden plot or
 - Schema/validation for zone/frost dates
 - Remove unnecessary packages
 - Change name/desc in package.json
+- Validate user has garden for accessing profile
 
 ### Questions/Unknowns
 
