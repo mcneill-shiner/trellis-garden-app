@@ -31,6 +31,7 @@ Any vegetable gardener, whether they're working a small community garden plot or
 - Content & knowledge base
 - Store (dropship)
 - Major feature: space planning tool, eventually with a time component
+- User setting: week start on Sunday or Monday
 
 ## App Status
 
