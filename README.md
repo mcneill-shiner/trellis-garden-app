@@ -35,6 +35,14 @@ Any vegetable gardener, whether they're working a small community garden plot or
 
 ## App Status
 
+### Current Feature: Dashboard/Tasks
+
+- Before accessing dashboard, calendar, or seed library--validate that user has garden
+- Max width for tables
+- Red styling for overdue tasks
+- How to handle plant tasks in db--separate table, with only completed & date?
+- Keep due dates entirely dynamic based on plant data?
+
 ### Next Steps
 
 - Set up plant db
@@ -45,7 +53,6 @@ Any vegetable gardener, whether they're working a small community garden plot or
 - Schema/validation for zone/frost dates
 - Remove unnecessary packages
 - Change name/desc in package.json
-- Validate user has garden for accessing profile
 
 ### Questions/Unknowns
 
