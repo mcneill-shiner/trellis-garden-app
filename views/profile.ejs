@@ -2,46 +2,79 @@
 <%- include('partials/header') -%>
 <div class="container">
   <div class="row mt-5">
-      <div class="col-6">
-          <div>
-              <p><strong>User Name</strong>: <%= user.userName %></p>
-              <p><strong>Email</strong>: <%= user.email %></p>
-              <a href="/logout" class="col-3 btn btn-primary">Logout</a>
-          </div>
-          <div class="mt-5">
-            <h2>Add a post</h2>
-            <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-              <div class="mb-3">
-                  <label for="title" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="title" name="title">
-              </div>
-              <div class="mb-3">
-                <label for="caption" class="form-label">Caption</label>
-                <textarea class="form-control" id="caption" name="caption"></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="imgUpload" class="form-label">Image</label>
-                <input type="file" class="form-control" id="imageUpload" name="file">
-              </div>
-              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
-            </form>
-          </div>
-      </div>
-      <div class="col-6">
-        <ul class="row list-unstyled">
-        <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
-            </a>
-          </li>
-        <% } %>
-        </ul>
-        <div class="row justify-content-center mt-5">
-          <a class="btn btn-primary" href="/feed">Return to Feed</a>
-        </div>  
-      </div>  
+    <div class="col">
+      <h2>Dashboard</h2>
+      <p>Hello, <%= user.userName %>!</p>
+      <h3 class="mt-5">Add a Crop</h3>
     </div>
+    <div class="col text-end">
+      <!-- if !garden, show graphic to set up garden -->
+      <p>Gardening in LOCATION</p>
+      <p>Zone ZONE</p>
+      <p>Growing Season: NUM DAYS</p>
+      <!-- if last frost has passed, show first frost; else show last -->
+      <p>Estimated Last Frost: DATE</p>
+      <a href="#"><span>Edit Profile</span></a>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <!-- dynamically displayed if there are overdue tasks -->
+    <h3>Overdue Tasks</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Direct Sow</th>
+          <th scope="col">Start Date</th>
+          <th scope="col">Due Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row"><input class="form-check-input me-1" type="checkbox" value="carrots" aria-label="...">Carrots</td>
+          <td>March 18</td>
+          <td>March 25</td>
+        </tr>
+        <tr>
+          <td scope="row"><input class="form-check-input me-1" type="checkbox" value="beets" aria-label="...">Beets</td>
+          <td>March 25</td>
+          <td>April 1</td>
+        </tr>
+        <tr>
+          <td scope="row"><input class="form-check-input me-1" type="checkbox" value="radishes" aria-label="...">Radishes</td>
+          <td>April 23</td>
+          <td>April 30</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row mt-5">
+    <h3>This Week's Tasks</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Direct Sow</th>
+          <th scope="col">Start Date</th>
+          <th scope="col">Due Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row"><input class="form-check-input me-1" type="checkbox" value="carrots" aria-label="...">Carrots</td>
+          <td>March 18</td>
+          <td>March 25</td>
+        </tr>
+        <tr>
+          <td scope="row"><input class="form-check-input me-1" type="checkbox" value="beets" aria-label="...">Beets</td>
+          <td>March 25</td>
+          <td>April 1</td>
+        </tr>
+        <tr>
+          <td scope="row"><input class="form-check-input me-1" type="checkbox" value="radishes" aria-label="...">Radishes</td>
+          <td>April 23</td>
+          <td>April 30</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 <%- include('partials/footer') -%>
