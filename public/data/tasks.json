@@ -1,0 +1,30 @@
+[
+  {
+    "id": 2000,
+    "user": "6450f3aeac7e6f31cc2296fc",
+    "plant": 1000,
+    "task": "prepareBed",
+    "completed": false
+  },
+  {
+    "id": 2000,
+    "user": "6450f3aeac7e6f31cc2296fc",
+    "plant": 1000,
+    "task": "startSeedsIndoors",
+    "completed": false
+  },
+  {
+    "id": 2000,
+    "user": "6450f3aeac7e6f31cc2296fc",
+    "plant": 1000,
+    "task": "transplant",
+    "completed": false
+  },
+  {
+    "id": 2000,
+    "user": "6450f3aeac7e6f31cc2296fc",
+    "plant": 1000,
+    "task": "harvest",
+    "completed": false
+  }
+]
