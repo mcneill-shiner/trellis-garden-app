@@ -102,7 +102,7 @@
   --bs-highlight-bg: #fff3cd;
   --bs-border-width: 1px;
   --bs-border-style: solid;
-  --bs-border-color: #dee2e6;
+  --bs-border-color: black;
   --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
   --bs-border-radius: 0.4rem;
   --bs-border-radius-sm: 0.25rem;
@@ -4054,7 +4054,7 @@ textarea.form-control-lg {
 .list-group {
   --bs-list-group-color: var(--bs-body-color);
   --bs-list-group-bg: var(--bs-body-bg);
-  --bs-list-group-border-color: var(--bs-border-color);
+  --bs-list-group-border-color: pink;
   --bs-list-group-border-width: var(--bs-border-width);
   --bs-list-group-border-radius: var(--bs-border-radius);
   --bs-list-group-item-padding-x: 1rem;
@@ -9288,3 +9288,6 @@ textarea.form-control-lg {
 
 h1, .h1, h2, .h2, h3, .h3 {
   font-family: "Fraunces", "Garamond", system-ui; }
+
+h2, .h2 {
+  font-weight: 700; }

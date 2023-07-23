@@ -12,6 +12,8 @@ $light: #9ab89f;
 $danger: #ff4136;
 $body-bg: #cfe1c8;
 $font-family-sans-serif: "Schibsted Grotesk", "Tahoma", system-ui;
+$border-color: black;
+$list-group-border-color: pink;
 // $link-color: ;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -24,4 +26,8 @@ h1,
 h2,
 h3 {
   font-family: "Fraunces", "Garamond", system-ui;
+}
+
+h2 {
+  font-weight: 700;
 }
