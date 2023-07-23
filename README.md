@@ -63,3 +63,4 @@ Any vegetable gardener, whether they're working a small community garden plot or
 - Does it make sense to set up plant db/API separately, so it can be made open source in the future?
 - When are standards for next season's frost dates set?
 - How to relate tasks to plants and gardens? Tasks would be regenerated for the new season once a frost date is set (for the first time including the new year?), but if a user changes their frost date later in the season, we'd want timing to be recalculated but not for the tasks to be completely regenerated. They may have already completed some early-season tasks, for example, and we don't want to lose that data.
+- Also need to account for users' preference between growing from seed and transplanting. How should tasks be generated? Is there a way to adjust if user changes preferences?
