@@ -53,6 +53,7 @@ Any vegetable gardener, whether they're working a small community garden plot or
 - Schema/validation for zone/frost dates
 - Remove unnecessary packages
 - Change name/desc in package.json
+- Fix nav issue - logged in logo should lead to dashboard
 
 ### Questions/Unknowns
 

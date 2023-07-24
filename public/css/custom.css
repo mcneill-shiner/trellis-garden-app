@@ -4054,7 +4054,7 @@ textarea.form-control-lg {
 .list-group {
   --bs-list-group-color: var(--bs-body-color);
   --bs-list-group-bg: var(--bs-body-bg);
-  --bs-list-group-border-color: pink;
+  --bs-list-group-border-color: var(--bs-border-color);
   --bs-list-group-border-width: var(--bs-border-width);
   --bs-list-group-border-radius: var(--bs-border-radius);
   --bs-list-group-item-padding-x: 1rem;
