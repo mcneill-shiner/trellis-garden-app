@@ -8,13 +8,18 @@
     "properties": {
       "sunlight": {
         "min": 6,
-        "max": 8,
+        "max": 10,
         "unitMeasure": "hours"
       },
       "spacing": {
         "min": 24,
         "max": 30,
         "rowMin": 36,
+        "unit": "inches"
+      },
+      "depth": {
+        "min": 8,
+        "max": 12,
         "unit": "inches"
       },
       "soil": ["sandy loam", "loam"],
@@ -26,29 +31,22 @@
       "support": ["stake", "cage"]
     },
     "events": {
-      "startSeedsIndoors": {
-        "isTask": true,
-        "min": 8,
-        "max": 12,
-        "unit": "weeks",
-        "modifier": "before",
-        "anchor": "last frost"
-      },
-      "transplant": {
+      "sowDirectly": {
         "isTask": true,
         "method": {
-          "airTemp": {
+          "date": {
             "recMethod": true,
-            "dayTemp": {
-              "min": 70,
-              "max": 75,
-              "unit": "degrees F"
-            },
-            "nightTemp": {
-              "min": 60,
-              "max": 65,
-              "unit": "degrees F"
-            }
+            "min": 2,
+            "max": 3,
+            "unit": "weeks",
+            "modifier": "before",
+            "anchor": "last frost"
+          },
+          "soilTemp": {
+            "recMethod": false,
+            "min": 40,
+            "max": 75,
+            "unit": "degrees F"
           }
         }
       },
@@ -67,6 +65,11 @@
         "unit": "days",
         "modifier": "after",
         "anchor": "transplant"
+      },
+      "succession": {
+        "min": 3,
+        "max": 4,
+        "unit": "weeks"
       }
     }
   },
