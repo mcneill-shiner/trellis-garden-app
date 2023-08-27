@@ -63,7 +63,15 @@ Any vegetable gardener, whether they're working a small community garden plot or
 - Best way to handle the plant db/JSON formatting? Lots of tools for the linting, but is there something better for the initial object building?
 - Does it make sense to set up plant db/API separately, so it can be made open source in the future?
 - When are standards for next season's frost dates set?
+
+### Data: Gardens, Plants, Tasks
+
 - How to relate tasks to plants and gardens? Tasks would be regenerated for the new season once a frost date is set (for the first time including the new year?), but if a user changes their frost date later in the season, we'd want timing to be recalculated but not for the tasks to be completely regenerated. They may have already completed some early-season tasks, for example, and we don't want to lose that data.
 - Also need to account for users' preference between growing from seed and transplanting. How should tasks be generated? Is there a way to adjust if user changes preferences?
 - For succession, need to include end date
 - Also specify spring/fall harvests. Should all specify this?
+- Tasks have a year, season, and optional succession
+- Plants have an array of seasons, and succession t/f
+- Tasks are initiated in two way: 1) frost dates are set for the year; 2) plant is added to garden
+- Need a check: must have a current-year frost date before adding plants to garden. Or should this be current-season? I.e. as soon as 2023 frost date passes, you can't add any new plants until setting 2024 frost dates
+- Is season really necessary? Seems like it only matters if there are two distinct growing seasons. In that case, you'd need to specify planting dates for both seasons. So split "events" into Spring and Fall? Do we specify Summer when that's relevant? For plants with only one season, you'd never need to refer to the season itself. Plus the names feel fuzzy...Early vs Late Spring, Summer, etc.
