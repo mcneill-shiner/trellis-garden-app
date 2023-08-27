@@ -1,11 +1,20 @@
 const cloudinary = require("../middleware/cloudinary");
 const Post = require("../models/Post");
 
+import plants from "../public/data/plants.json";
+import tasks from "../public/data/tasks.json";
+
 module.exports = {
   getProfile: async (req, res) => {
     try {
       const posts = await Post.find({ user: req.user.id });
-      res.render("profile.ejs", { posts: posts, user: req.user });
+      // this is where we need to pass in data
+      res.render("profile.ejs", {
+        posts: posts,
+        tasks: tasks,
+        plants: plants,
+        user: req.user,
+      });
     } catch (err) {
       console.log(err);
     }
