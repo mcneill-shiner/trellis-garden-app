@@ -1,5 +1,6 @@
 const cloudinary = require("../middleware/cloudinary");
 const Post = require("../models/Post");
+const Garden = require("../models/Garden");
 
 import plants from "../public/data/plants.json";
 import tasks from "../public/data/tasks.json";
