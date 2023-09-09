@@ -2,8 +2,11 @@ const cloudinary = require("../middleware/cloudinary");
 const Post = require("../models/Post");
 const Garden = require("../models/Garden");
 
-import plants from "../public/data/plants.json";
-import tasks from "../public/data/tasks.json";
+const plants = require("../public/data/plants");
+const tasks = require("../public/data/tasks");
+
+// import plants from "../public/data/plants";
+// import tasks from "../public/data/tasks";
 
 module.exports = {
   getProfile: async (req, res) => {
