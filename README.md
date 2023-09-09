@@ -55,6 +55,7 @@ Any vegetable gardener, whether they're working a small community garden plot or
 - Change name/desc in package.json
 - Fix nav issue - logged in logo should lead to dashboard
 - Fix day/night temps as plant timing option in sample data
+- Refactor cjs to esm
 
 ### Questions/Unknowns
 
