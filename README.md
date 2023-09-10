@@ -76,3 +76,4 @@ Any vegetable gardener, whether they're working a small community garden plot or
 - Tasks are initiated in two way: 1) frost dates are set for the year; 2) plant is added to garden
 - Need a check: must have a current-year frost date before adding plants to garden. Or should this be current-season? I.e. as soon as 2023 frost date passes, you can't add any new plants until setting 2024 frost dates
 - Is season really necessary? Seems like it only matters if there are two distinct growing seasons. In that case, you'd need to specify planting dates for both seasons. So split "events" into Spring and Fall? Do we specify Summer when that's relevant? For plants with only one season, you'd never need to refer to the season itself. Plus the names feel fuzzy...Early vs Late Spring, Summer, etc.
+- Should only have one garden record for each userId. How to deal w/ this? Down the road, may want to support multiple, in which case garden id would probably be part of url query.
