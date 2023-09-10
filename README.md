@@ -64,6 +64,8 @@ Any vegetable gardener, whether they're working a small community garden plot or
 - Best way to handle the plant db/JSON formatting? Lots of tools for the linting, but is there something better for the initial object building?
 - Does it make sense to set up plant db/API separately, so it can be made open source in the future?
 - When are standards for next season's frost dates set?
+- Do I need a date library? And if so, which one? Day.js seems like it would do the job.
+- Will things get complicated with time zones? Should I be pegging a garden to the zip code's time zone to solve for that?
 
 ### Data: Gardens, Plants, Tasks
 
