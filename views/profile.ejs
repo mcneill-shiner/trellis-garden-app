@@ -13,7 +13,7 @@
       <p>Zone ZONE</p>
       <p>Growing Season: NUM DAYS</p>
       <!-- if last frost has passed, show first frost; else show last -->
-      <p>Estimated Last Frost: LAST FROST</p>
+      <p>Estimated Last Frost: <%= garden[0].lastFrost.toLocaleDateString('en-us') %></p>
       <a href="#"><span>Edit Profile</span></a>
     </div>
   </div>
