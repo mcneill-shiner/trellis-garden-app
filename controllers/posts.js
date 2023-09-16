@@ -11,11 +11,9 @@ const tasks = require("../public/data/tasks");
 module.exports = {
   getProfile: async (req, res) => {
     try {
-      const posts = await Post.find({ user: req.user.id });
       const garden = await Garden.find({ user: req.user.id });
       // this is where we need to pass in data
       res.render("profile.ejs", {
-        posts: posts,
         garden: garden,
         tasks: tasks,
         plants: plants,
