@@ -12,10 +12,11 @@ module.exports = {
   getProfile: async (req, res) => {
     try {
       const garden = await Garden.find({ user: req.user.id });
+      const userTasks = [...tasks].filter((task) => task.user === req.user.id);
       // this is where we need to pass in data
       res.render("profile.ejs", {
         garden: garden,
-        tasks: tasks,
+        tasks: userTasks,
         plants: plants,
         user: req.user,
       });

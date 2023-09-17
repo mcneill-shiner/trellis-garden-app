@@ -9,7 +9,7 @@
     </div>
     <div class="col text-end">
       <!-- if !garden, show graphic to set up garden -->
-      <p>Gardening in LOCATION</p>
+      <p>Gardening in LOCATION <%= tasks[0].task %></p>
       <p>Zone ZONE</p>
       <p>Growing Season: NUM DAYS</p>
       <!-- if last frost has passed, show first frost; else show last -->
@@ -19,7 +19,7 @@
   </div>
   <div class="row mt-5">
     <!-- dynamically displayed if there are overdue tasks -->
-    <h3>Overdue Tasks</h3>
+    <!-- <h3>Overdue Tasks</h3>
     <table class="table">
       <thead>
         <tr>
@@ -46,7 +46,7 @@
         </tr>
       </tbody>
     </table>
-  </div>
+  </div> -->
   <div class="row mt-5">
     <h3>This Week's Tasks</h3>
     <table class="table">
@@ -58,6 +58,13 @@
         </tr>
       </thead>
       <tbody>
+        <% tasks.forEach(task => { %>
+          <tr>
+            <td scope="row"><input class="form-check-input me-1" type="checkbox" value="carrots" id="<%= task.id %>" aria-label="..."><%= plants.find(plant => plant.id === task.plant).name %></td>
+            <td>March 18</td>
+            <td>March 25</td>
+          </tr>          
+        <% }) %>
         <tr>
           <td scope="row"><input class="form-check-input me-1" type="checkbox" value="carrots" aria-label="...">Carrots</td>
           <td>March 18</td>
