@@ -66,6 +66,7 @@ Any vegetable gardener, whether they're working a small community garden plot or
 - When are standards for next season's frost dates set?
 - Do I need a date library? And if so, which one? Day.js seems like it would do the job.
 - Will things get complicated with time zones? Should I be pegging a garden to the zip code's time zone to solve for that?
+- How to handle plants that should really be planted based on air or soil temps rather than dates? Ex. eggplant. Have date range for calendar/task list, but then also include a note?
 
 ### Data: Gardens, Plants, Tasks
 
