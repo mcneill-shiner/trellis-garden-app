@@ -9,11 +9,12 @@
     </div>
     <div class="col text-end">
       <!-- if !garden, show graphic to set up garden -->
-      <p>Gardening in LOCATION <%= tasks[0].task %></p>
+      <p>Gardening in LOCATION</p>
       <p>Zone ZONE</p>
       <p>Growing Season: NUM DAYS</p>
       <!-- if last frost has passed, show first frost; else show last -->
-      <p>Estimated Last Frost: <%= garden[0].lastFrost.toLocaleDateString('en-us') %></p>
+
+      <p>Estimated Last Frost: <%= garden.lastFrost %></p>
       <a href="#"><span>Edit Profile</span></a>
     </div>
   </div>
@@ -60,9 +61,9 @@
       <tbody>
         <% tasks.forEach(task => { %>
           <tr>
-            <td scope="row"><input class="form-check-input me-1" type="checkbox" value="carrots" id="<%= task.id %>" aria-label="..."><%= plants.find(plant => plant.id === task.plant).name %></td>
+            <td scope="row"><input class="form-check-input me-1" type="checkbox" value="carrots" id="<%= task.id %>" aria-label="..."><%= plants.find(plant => plant.id === task.plantId).name %></td>
             <td><%= task.title %></td>
-            <td><%= plants.find(plant => plant.id === task.plant).events[task.title].min %></td>
+            <td><%= plants.find(plant => plant.id === task.plantId).events[task.title].min %></td>
             <td>March 25</td>
           </tr>          
         <% }) %>

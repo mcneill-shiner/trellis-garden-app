@@ -5,6 +5,8 @@ const Garden = require("../models/Garden");
 const plants = require("../public/data/plants");
 const tasks = require("../public/data/tasks");
 
+const dayjs = require("dayjs");
+
 // import plants from "../public/data/plants";
 // import tasks from "../public/data/tasks";
 
@@ -12,10 +14,17 @@ module.exports = {
   getProfile: async (req, res) => {
     try {
       const garden = await Garden.find({ user: req.user.id });
-      const userTasks = [...tasks].filter((task) => task.user === req.user.id);
-      // this is where we need to pass in data
+      const formattedGarden = {
+        firstFrost: dayjs(garden[0].firstFrost).format("MMM d"),
+        lastFrost: dayjs(garden[0].lastFrost).format("MMM d"),
+      };
+
+      const userTasks = [...tasks].filter(
+        (task) => task.userId === req.user.id
+      );
+
       res.render("profile.ejs", {
-        garden: garden,
+        garden: formattedGarden,
         tasks: userTasks,
         plants: plants,
         user: req.user,
@@ -24,6 +33,21 @@ module.exports = {
       console.log(err);
     }
   },
+  // getProfile: async (req, res) => {
+  //   try {
+  //     const garden = await Garden.find({ user: req.user.id });
+  //     const userTasks = [...tasks].filter((task) => task.user === req.user.id);
+  //     // this is where we need to pass in data
+  //     res.render("profile.ejs", {
+  //       garden: garden,
+  //       tasks: userTasks,
+  //       plants: plants,
+  //       user: req.user,
+  //     });
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // },
   getFeed: async (req, res) => {
     try {
       const posts = await Post.find().sort({ createdAt: "desc" }).lean();
