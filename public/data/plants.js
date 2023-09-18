@@ -33,22 +33,11 @@ const plants = [
     events: {
       sowDirectly: {
         isTask: true,
-        method: {
-          date: {
-            recMethod: true,
-            min: 2,
-            max: 3,
-            unit: "weeks",
-            modifier: "before",
-            anchor: "last frost",
-          },
-          soilTemp: {
-            recMethod: false,
-            min: 40,
-            max: 75,
-            unit: "degrees F",
-          },
-        },
+        min: 2,
+        max: 3,
+        unit: "weeks",
+        modifier: "before",
+        anchor: "last frost",
       },
       germinate: {
         isTask: false,

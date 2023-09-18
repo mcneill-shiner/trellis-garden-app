@@ -61,7 +61,8 @@
         <% tasks.forEach(task => { %>
           <tr>
             <td scope="row"><input class="form-check-input me-1" type="checkbox" value="carrots" id="<%= task.id %>" aria-label="..."><%= plants.find(plant => plant.id === task.plant).name %></td>
-            <td>March 18</td>
+            <td><%= task.title %></td>
+            <td><%= plants.find(plant => plant.id === task.plant).events[task.title].min %></td>
             <td>March 25</td>
           </tr>          
         <% }) %>
