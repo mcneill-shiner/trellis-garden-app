@@ -106,6 +106,11 @@ const plants = [
       },
       transplant: {
         isTask: true,
+        min: 1,
+        max: 2,
+        unit: "weeks",
+        modifier: "after",
+        anchor: "lastFrost",
         method: {
           airTemp: {
             recMethod: true,
