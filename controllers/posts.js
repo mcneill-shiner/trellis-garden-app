@@ -33,21 +33,6 @@ module.exports = {
       console.log(err);
     }
   },
-  // getProfile: async (req, res) => {
-  //   try {
-  //     const garden = await Garden.find({ user: req.user.id });
-  //     const userTasks = [...tasks].filter((task) => task.user === req.user.id);
-  //     // this is where we need to pass in data
-  //     res.render("profile.ejs", {
-  //       garden: garden,
-  //       tasks: userTasks,
-  //       plants: plants,
-  //       user: req.user,
-  //     });
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // },
   getFeed: async (req, res) => {
     try {
       const posts = await Post.find().sort({ createdAt: "desc" }).lean();
