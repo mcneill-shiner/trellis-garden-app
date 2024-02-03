@@ -42,6 +42,8 @@ Any vegetable gardener, whether they're working a small community garden plot or
 - Set up basic design system
 - Research alternate names
 - Schema/validation for zone/frost dates
+- Remove unnecessary packages
+- Change name/desc in package.json
 
 ### Questions/Unknowns
 
