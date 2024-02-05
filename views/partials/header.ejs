@@ -1,32 +1,36 @@
 
 <body>
   <header class="container">
-    <nav>
-      <div class="navbar navbar-light bg-light">
+    <nav class="font-serif">
+      <div class="navbar navbar-light">
         <div class="container">
           <a class="navbar-brand" href="#">
             <img src="/img/trellis-logo.png" alt="" height="48" />
           </a>
           <% if (typeof user !== 'undefined') { %>
           <!-- for logged in user -->
-          <div>
-            <span>Settings</span>
-            <a href="#"><span>Logout</span></a>
+          <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Account
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="/logout">Logout</a></li>
+          </ul>
+            <!-- <span>Settings</span>
+            <a href="#"><span>Logout</span></a> -->
           </div>
         <% } else { %>
           <div>
             <div>
-              <a href="#"><span>Logout</span></a>
-              <span>Sign Up</span>
-            </div>
-            <div id="signin-version" class="d-none">
-              <span>Sign In</span>
+              <a href="/signup"><span>Sign Up</span></a>
+              <a href="/login"><span>Log In</span></a>
             </div>
           </div>
         <% } %>
         </div>
       </div>
-      <div class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="navbar navbar-expand-lg navbar-light text-uppercase">
         <div class="container-fluid">
           <button
             class="navbar-toggler"
