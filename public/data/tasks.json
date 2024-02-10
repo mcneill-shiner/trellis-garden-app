@@ -3,6 +3,7 @@
     "id": 2000,
     "user": "6450f3aeac7e6f31cc2296fc",
     "plant": 1000,
+    "year": 2024,
     "task": "prepareBed",
     "completed": false
   },
@@ -10,6 +11,7 @@
     "id": 2000,
     "user": "6450f3aeac7e6f31cc2296fc",
     "plant": 1000,
+    "year": 2024,
     "task": "startSeedsIndoors",
     "completed": false
   },
@@ -17,6 +19,7 @@
     "id": 2000,
     "user": "6450f3aeac7e6f31cc2296fc",
     "plant": 1000,
+    "year": 2024,
     "task": "transplant",
     "completed": false
   },
@@ -24,6 +27,87 @@
     "id": 2000,
     "user": "6450f3aeac7e6f31cc2296fc",
     "plant": 1000,
+    "year": 2024,
+    "task": "harvest",
+    "completed": false
+  },
+  {
+    "id": 2000,
+    "user": "6450f3aeac7e6f31cc2296fc",
+    "plant": 1001,
+    "year": 2024,
+    "task": "prepareBed",
+    "completed": false
+  },
+  {
+    "id": 2000,
+    "user": "6450f3aeac7e6f31cc2296fc",
+    "plant": 1001,
+    "year": 2024,
+    "succession": 0,
+    "task": "sowDirectly",
+    "completed": false
+  },
+  {
+    "id": 2000,
+    "user": "6450f3aeac7e6f31cc2296fc",
+    "plant": 1001,
+    "year": 2024,
+    "succession": 0,
+    "task": "harvest",
+    "completed": false
+  },
+  {
+    "id": 2000,
+    "user": "6450f3aeac7e6f31cc2296fc",
+    "plant": 1001,
+    "year": 2024,
+    "succession": 1,
+    "task": "sowDirectly",
+    "completed": false
+  },
+  {
+    "id": 2000,
+    "user": "6450f3aeac7e6f31cc2296fc",
+    "plant": 1001,
+    "year": 2024,
+    "succession": 1,
+    "task": "harvest",
+    "completed": false
+  },
+  {
+    "id": 2000,
+    "user": "6450f3aeac7e6f31cc2296fc",
+    "plant": 1001,
+    "year": 2024,
+    "succession": 2,
+    "task": "sowDirectly",
+    "completed": false
+  },
+  {
+    "id": 2000,
+    "user": "6450f3aeac7e6f31cc2296fc",
+    "plant": 1001,
+    "year": 2024,
+    "succession": 2,
+    "task": "harvest",
+    "completed": false
+  },
+  {
+    "id": 2000,
+    "user": "6450f3aeac7e6f31cc2296fc",
+    "plant": 1001,
+    "year": 2024,
+    "succession": 3,
+    "task": "sowDirectly",
+    "completed": false
+  },
+  {
+    "id": 2000,
+    "user": "6450f3aeac7e6f31cc2296fc",
+    "plant": 1001,
+    "year": 2024,
+    "succession": 3,
     "task": "harvest",
     "completed": false
   }
