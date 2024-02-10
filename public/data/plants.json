@@ -69,7 +69,14 @@
       "succession": {
         "min": 3,
         "max": 4,
-        "unit": "weeks"
+        "unit": "weeks",
+        "end": {
+          "min": 10,
+          "max": 12,
+          "unit": "weeks",
+          "modifier": "before",
+          "anchor": "last frost"
+        }
       }
     }
   },
