@@ -1,4 +1,3 @@
-// const tasks = {
 const tasks = [
   {
     id: 2001,
@@ -113,7 +112,6 @@ const tasks = [
     completed: false,
   },
 ];
-// }
 
 // export default tasks;
 module.exports = tasks;

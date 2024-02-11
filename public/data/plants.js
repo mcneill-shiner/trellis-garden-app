@@ -1,7 +1,7 @@
 const plants = [
   {
     id: 1001,
-    type: "carrot",
+    name: "carrot",
     isTemplate: true,
     recMethod: "sowDirectly",
     userMethod: "sowDirectly",
@@ -82,7 +82,7 @@ const plants = [
   },
   {
     id: 1000,
-    type: "eggplant",
+    name: "eggplant",
     isTemplate: true,
     recMethod: "transplant",
     userMethod: "startSeedsIndoors",
